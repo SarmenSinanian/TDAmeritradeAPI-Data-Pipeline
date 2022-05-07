@@ -49,13 +49,9 @@ for name in dateSet:
 #  current row of selected(dataframe) into the dateSet dates' dataframe (dataframes are housed
 #  within the 'd' dictionary which is a dictionary of dataframes created for each date)
 for dates in dateSet:
-    #     print(i)
     counter = 0
     for symbol in selected['symbol']:
-
         if dates in symbol:
-            #             print(j)
-            #             print(d[i])
             d[dates].loc[len(d[dates].index)] = selected.loc[counter]
         counter += 1
 
